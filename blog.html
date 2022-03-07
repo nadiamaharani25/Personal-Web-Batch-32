@@ -1,0 +1,305 @@
+<html>
+
+<head>
+    <title>Personal Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- First Nabvbar -->
+    <nav>
+        <!-- Left Side-->
+        <div class="left-side">
+            <img src="assets/logo.png" alt="" width="50px">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li style="font-weight: bold;"><a href="blog.html">My Project</a></li>
+            </ul>
+        </div>
+        <!-- Left Side -->
+
+        <!-- Right Side-->
+        <div class="right-side">
+            <a href="contact.html">Contact Me</a>
+        </div>
+        <!-- Right Side -->
+
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- My Project -->
+
+    <div class="blog">
+        <div class="blog-form">
+            <div class="form-container">
+
+                <!-- First Form -->
+                <form onsubmit="addBlog(event)">
+                    <h1>ADD MY PROJECT</h1>
+
+                    <!-- Name -->
+                    <div>
+                        <label for="input-projecr-name">Project Name</label>
+                        <input id="input-project-name">
+                    </div>
+                    <!-- Name -->
+
+                    <!-- Date -->
+                    <div class="dates">
+                        <!-- Left Side -->
+                        <div class="left-side">
+                            <label for="input-date">Start Date</label>
+                            <input type="date" id="input-date">
+                        </div>
+                        <!-- Left Side -->
+
+                        <!-- Right Side -->
+                        <div class="right-side">
+                            <label for="input-date">End Date</label>
+                            <input type="date" id="input-date">
+                        </div>
+                        <!-- Right side -->
+                    </div>
+                    <!-- Date -->
+
+                    <!-- Description -->
+                    <div>
+                        <label for="input-description">Description</label>
+                        <textarea id="input-description"></textarea>
+                    </div>
+                    <!-- Description -->
+
+                    <!-- Technologies -->
+                    <div class="technologies">
+                        <label for="technologies">Technologies</label>
+                        <!-- Technologies Left Side -->
+                        <div class="left-side" style="margin-top: 40px;">
+                            <div class="choice">
+                                <input type="checkbox" name="programming" id="technologies" value="Node Js">
+                                <p>Node Js</p>
+                            </div>
+
+                            <div class="choice">
+                                <input type="checkbox" name="programming" id="technologies" value="React Js">
+                                <p>React Js</p>
+                            </div>
+                        </div>
+                        <!-- Technologies Left Side -->
+
+                        <!-- Technologies Right Side -->
+                        <div class="right-side" style="margin-top: 40px;">
+                            <div class="choice">
+                                <input type="checkbox" name="programming" id="technologies" value="Next Js">
+                                <p>Next Js</p>
+                            </div>
+
+                            <div class="choice">
+                                <input type="checkbox" name="programming" id="technologies" value="TypeScript">
+                                <p>TypeScript</p>
+                            </div>
+                        </div>
+                        <!-- Technologies Right Side -->
+                    </div>
+                    <!-- Technologies -->
+
+                    <div>
+                        <label>Upload Image</label>
+                        <div class="blog-image-group">
+                            <!-- Left Side -->
+                            <div class="left-side">
+                                <label for="input-blog-image">
+                                    <p style="
+                                    color: rgb(139, 138, 138); 
+                                    ">choose
+                                    </p>
+                                </label>
+                            </div>
+                            <!-- Left Side -->
+
+                            <!-- Right Side -->
+                            <div class="right-side">
+                                <input type="file" id="input-blog-image" hidden>
+                                <img src="assets/file.png" alt="file" class="rotate90">
+                            </div>
+                            <!-- Right Side -->
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" onclick="addBlog()">submit</button>
+                    </div>
+
+                </form>
+                <!-- End Form -->
+            </div>
+        </div>
+
+
+        <!-- First container -->
+        <div class="container">
+            <h2>MY PROJECT</h2>
+
+            <!-- Contents -->
+            <div id="contents" class="blog-list">
+
+                <!-- Blog List Item 1 -->
+                <div class="blog-list-item">
+                    <div class="blog-image">
+                        <img src="assets/code.jpg" alt="">
+                    </div>
+
+                    <h3>
+                        <a href="blog-detail.html" target="_blank" style="text-decoration: none;">
+                            Dumbways Mobile App - 2022
+                    </h3>
+                    <h5>
+                        durasi: 3 bulan
+                    </h5>
+
+                    <div class="detail-blog-content">
+                        <p>
+                            App that used for dumbways student, if was deployed and can downloaded on playstore.
+                            Happy Download.
+                        </p>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fa-brands fa-google-play"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+
+                    <div class="blog-content">
+
+
+                        <div class="button-group">
+                            <a href="#" class="button-edit">edit</a>
+                            <a href="#" class="button-delete">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog List Item 1 -->
+
+                <!-- Blog List Item 2 -->
+                <div class="blog-list-item">
+                    <div class="blog-image">
+                        <img src="assets/mobile.jpg" alt="">
+                    </div>
+
+                    <h3>
+                        <a href="blog-detail.html" target="_blank" style="text-decoration: none;">
+                            Dumbways Mobile App - 2022
+                    </h3>
+                    <h5>
+                        durasi: 3 bulan
+                    </h5>
+
+                    <div class="detail-blog-content">
+                        <p>
+                            App that used for dumbways student, if was deployed and can downloaded on playstore.
+                            Happy
+                            Download.
+                        </p>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fa-brands fa-google-play"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="button-group">
+                            <a href="#" class="button-edit">edit</a>
+                            <a href="#" class="button-delete">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog List Item 2 -->
+
+                <!-- Blog List Item 3 -->
+                <div class="blog-list-item">
+                    <div class="blog-image">
+                        <img src="assets/html.jpg" alt="">
+                    </div>
+
+                    <h3>
+                        <a href="blog-detail.html" target="_blank" style="text-decoration: none;">
+                            Dumbways Mobile App - 2022
+                    </h3>
+                    <h5>
+                        durasi: 3 bulan
+                    </h5>
+
+                    <div class="detail-blog-content">
+                        <p>
+                            App that used for dumbways student, if was deployed and can downloaded on playstore.
+                            Happy
+                            Download.
+                        </p>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fa-brands fa-google-play"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="button-group">
+                            <a href="#" class="button-edit">edit</a>
+                            <a href="#" class="button-delete">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog List Item 3 -->
+
+                <!-- Blog List Item 4 -->
+                <div class="blog-list-item">
+                    <div class="blog-image">
+                        <img src="assets/coding.jpg" alt="">
+                    </div>
+
+                    <h3>
+                        <a href="blog-detail.html" target="_blank" style="text-decoration: none;">
+                            Dumbways Mobile App - 2022
+                    </h3>
+                    <h5>
+                        durasi: 3 bulan
+                    </h5>
+
+                    <div class="detail-blog-content">
+                        <p>
+                            App that used for dumbways student, if was deployed and can downloaded on playstore.
+                            Happy Download.
+                        </p>
+                    </div>
+
+                    <div class="icon">
+                        <i class="fa-brands fa-google-play"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-java"></i>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="button-group">
+                            <a href="#" class="button-edit">edit</a>
+                            <a href="#" class="button-delete">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog List Item 4 -->
+
+            </div>
+            <!-- Contents -->
+        </div>
+        <!-- End Container -->
+    </div>
+
+    <script src="blog.js"></script>
+</body>
+
+</html>
